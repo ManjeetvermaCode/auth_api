@@ -1,11 +1,15 @@
 const express=require('express')
 const app=express()
-const ejs=require('ejs')
 
-// app.use('view engine','ejs')
+const path=require('path')
+
+
+app.set('view engine','ejs')
+app.set('views',path.join(__dirname,'/views'))//this allows us to call views dir file from anywhere.
+app.use(express.static('assets'))
 
 app.get('/',(req,res)=>{
-    res.send('this is home page')
+    res.render('home')
 })
 
 app.listen('3000',()=>{
