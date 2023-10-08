@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <%- include('./partials/bootstrap_cdn') %>
+
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+
+    <div class="card" style="width: 18rem;margin:3rem auto">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+            <form action="/login" method="POST" novalidate>
+                <div class="mb-3">
+                    <label class="form-label" for="username">Enter UserName</label>
+                    <input class="form-control" type="text" name="username" id="username" required>
+                 
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="pass">Enter password</label>
+                    <input class="form-control" type="password" name="password" id="pass" required>
+                   
+                </div>
+<div  class="mb-2">
+    <span>Not a User?<a href="/register">register</a></span>
+
+</div>
+                <button class="btn btn-success">Submit</button>
+            </form>
+        </div>
+      </div>
+
+
+      
+</body>
+</html>
