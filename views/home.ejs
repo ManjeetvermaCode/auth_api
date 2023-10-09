@@ -9,6 +9,9 @@
 </head>
 <body>
    <%- include('./partials/navbar') %>
+   <% if (username) { %>
+    <h1>Welcome,  <%= username %></h1>
+   <% } %>
     <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit.s!</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolores adipisci ratione illo eveniet itaque sint corporis accusamus quas quam. Blanditiis quidem architecto debitis aliquam, ea hic enim error dolore?
     Maiores corrupti commodi vitae possimus amet placeat, sit itaque aspernatur voluptatem distinctio tempora fugit, corporis tenetur incidunt at deleniti, suscipit sunt recusandae quae vel blanditiis modi! Tempora officia odit voluptas.
