@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <%- include('./partials/bootstrap_cdn') %>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+    <div class="card" style="width: 28rem;margin:3rem auto">
+        <div class="card-body">
+            <form action="/createpost" method="POST" novalidate>
+                <div class="mb-3">
+                    <label class="form-label" for="title">Enter Title</label>
+                    <input class="form-control" type="text" name="title" id="title" required>
+                 
+                </div>
+                <div class="mb-3">
+                    <label class="form-label mb-0" for="body">Enter Content</label>
+                    <!-- <input class="form-control" type="password" name="password" id="pass" required> -->
+                   <textarea name="body" id="body" cols="54" rows="8"></textarea>
+                </div>
+
+                <button class="btn btn-success">Submit</button>
+            </form>
+        </div>
+      </div>
+</body>
+</html>

@@ -6,10 +6,15 @@ const postSchema=new mongoose.Schema({
         type:String,
 
     },
-    description:{
+    body:{
         require:true,
         type:String,
     },
+    createdBy:{
+        type:mongoose.Schema.Types.String,
+        ref:'User'
+        
+    }
   
 })
 
