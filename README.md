@@ -14,13 +14,3 @@
 ```
 5. Enter ```nodemon index.js``` from root directory from terminal to run the Application
 
-## Images of the Application
-![HomePage]('https://res.cloudinary.com/duj5gdzm9/image/upload/v1696859470/Screenshot_2023-10-09_192032_rdrcai.png')
-![loginPage]('https://res.cloudinary.com/duj5gdzm9/image/upload/v1696859290/Screenshot_2023-10-09_191617_i4xexe.png') 
-![RegisterPage]('https://res.cloudinary.com/duj5gdzm9/image/upload/v1696859289/Screenshot_2023-10-09_191702_bgw46w.png') 
-![UserDetails]('https://res.cloudinary.com/duj5gdzm9/image/upload/v1696859289/Screenshot_2023-10-09_191647_e4h9kj.png')
-
- <img src='https://res.cloudinary.com/duj5gdzm9/image/upload/v1696859470/Screenshot_2023-10-09_192032_rdrcai.png' alt='Home Page'>
- <img src='https://res.cloudinary.com/duj5gdzm9/image/upload/v1696859290/Screenshot_2023-10-09_191617_i4xexe.png' alt='Login Page'>
- <img src='https://res.cloudinary.com/duj5gdzm9/image/upload/v1696859289/Screenshot_2023-10-09_191702_bgw46w.png' alt="Register Page">
- <img src='https://res.cloudinary.com/duj5gdzm9/image/upload/v1696859289/Screenshot_2023-10-09_191647_e4h9kj.png' alt='User Details Dropdown'>
