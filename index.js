@@ -114,17 +114,31 @@ app.get('/createposts',isLoggedIn,cors(),(req,res,next)=>{
   res.render('createPost')
 })
 
-app.post('/createpost',isLoggedIn,(req,res)=>{
+app.post('/createpost',async(req,res)=>{
   const {title,body}=req.body
-  console.log('title -',title, 'body is -', body)
+  const userId=app.locals.currentUser
+  console.log(userId)
+  const newpost=new Post({
+    title,
+    body,
+    createdBy:userId._id
+  })
+  const savedPost=await newpost.save()
+  console.log(savedPost)
+  res.redirect('/')
 })
-app.get('/', (req, res) => {
-  const currentUser = app.locals.currentUser;
-  if (currentUser) {
-    res.render('home', { username: currentUser.username });
+
+app.get('/',isLoggedIn,async (req, res) => {
+  const user = app.locals.currentUser;
+  
+  if (user) {
+    const posts=await Post.find({createdBy:user._id})
+    console.log(posts)
+    res.render('home', { username: user.username,posts });
   } else {
     res.redirect('/login');
   }
+ 
 });
 
 

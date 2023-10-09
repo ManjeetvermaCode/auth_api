@@ -10,12 +10,19 @@
 <body>
    <%- include('./partials/navbar') %>
    <% if (username) { %>
-    <h1>Welcome,  <%= username %></h1>
+    <h1 style="text-align: center;">Welcome,  <%= username %></h1>
    <% } %>
-    <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit.s!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dolores adipisci ratione illo eveniet itaque sint corporis accusamus quas quam. Blanditiis quidem architecto debitis aliquam, ea hic enim error dolore?
-    Maiores corrupti commodi vitae possimus amet placeat, sit itaque aspernatur voluptatem distinctio tempora fugit, corporis tenetur incidunt at deleniti, suscipit sunt recusandae quae vel blanditiis modi! Tempora officia odit voluptas.
-    Ea quasi aperiam consectetur cumque est consequatur itaque nemo amet maxime magni error assumenda expedita illum, fugiat laboriosam reprehenderit veniam distinctio modi, ex enim unde ad. Labore, omnis nemo! Sed?</p>
+   <% if (posts) { %>
+    <ul>
+        <% for(let p of posts){ %>
+            <div class="card mb-2 p-2" style="text-decoration: none;">
+                <h5>Title :<a href="#" class="card-body"><%= p.title %></a></h5>
+                <p>Description :<%= p.body %></p>
+              </div>
+        <% } %>
+    </ul>
+   <% } %>
+   
     <%- include('./partials/footer') %>
 </body>
 </html>
