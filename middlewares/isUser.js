@@ -7,7 +7,6 @@ const isLoggedIn=async(req,res,next)=>{
         try {
             const UserId=JWT.verify(token,process.env.JWT_SECRET)
             currentUser=await User.findById(UserId.UserId)
-            req.User=currentUser
             next()
             
         } catch (error) {
@@ -16,7 +15,7 @@ const isLoggedIn=async(req,res,next)=>{
         }
     }
     else{
-        return res.send('token not found')
+        return res.send('token not found, make sure you are logged in')
 
     }
    
