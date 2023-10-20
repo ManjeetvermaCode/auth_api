@@ -12,7 +12,7 @@
    JWT_SECRET='Your JWT Secret key'
    SESSION_KEY='you secret session phrase'
 ```
-5. Enter ```nodemon index.js``` from root directory from terminal to run the Application
+5. Enter ```node index.js``` from root directory from terminal to run the Application
 
 
 
